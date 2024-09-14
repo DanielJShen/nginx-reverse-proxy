@@ -12,13 +12,13 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+<div align="center">
 
   [![logo](images/logo.svg)](https://github.com/DanielJShen/nginx-reverse-proxy)
 
   <h2 align="center">NGINX Reverse Proxy</h2>
 
-  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+  <div align="center">
     <p>A custom NGINX Reverse Proxy installable on an AWS EC2 container using Terraform</p>
     <p>
       <a href="https://github.com/DanielJShen/nginx-reverse-proxy/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
