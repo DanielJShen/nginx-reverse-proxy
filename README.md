@@ -1,4 +1,5 @@
-<div style="text-align: center;" class="myWrapper" markdown="1">
+<!--suppress HtmlUnknownAnchorTarget -->
+<div style="text-align: center;" class="myWrapper">
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -11,24 +12,20 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
 
-  [![logo](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAFVBMVEVHcExEREREREREREREREREREREREQONXPQAAAABnRSTlMAHUS34eW1tKcHAAAA1ElEQVR42u2VMQ7CIBSGqVygqAfQQWdc2JvQ7hrTA0jL/Y9gQhgE38vfpBI78A0vHb7hI+UF8cnVJ7wEh0lFx3k7n3FiRJmLmhFjIo40uehAIoqU36IGiSAyJsLImIgjJSVqPhFHGkp0bCKOlLSouUQcaWjRMYk4Uj4tTR7ZKIZWbIXljQdL098y8egZ7kvFboUY/82IxPmsAhckTm38KiziRnzqAYkZ5UV8e+rO/HtnEmbbhwHFh9qPYSCxE80QRjFxfeMUT113pu5MfWd++M5sTnwDHDYn9zHfqaEAAAAASUVORK5CYII=)](https://github.com/DanielJShen/nginx-reverse-proxy)
+  [![logo](images/logo.svg)](https://github.com/DanielJShen/nginx-reverse-proxy)
 
-  <h3 align="center">NGINX Reverse Proxy</h3>
+  <h2 align="center">NGINX Reverse Proxy</h2>
 
-  <p align="center">
-    A custom NGINX Reverse Proxy installable on an AWS EC2 container using Terraform
-    <br />
-    <a href="https://pages.github.com/DanielJShen/nginx-reverse-proxy"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/DanielJShen/nginx-reverse-proxy">View Demo</a>
-    ·
-    <a href="https://github.com/DanielJShen/nginx-reverse-proxy/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/DanielJShen/nginx-reverse-proxy/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
+  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+    <p>A custom NGINX Reverse Proxy installable on an AWS EC2 container using Terraform</p>
+    <p>
+      <a href="https://github.com/DanielJShen/nginx-reverse-proxy/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+      ·
+      <a href="https://github.com/DanielJShen/nginx-reverse-proxy/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    </p>
+  </div>
 </div>
 
 
@@ -61,16 +58,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Project Example][project-screenshot]](https://example.com)
-
 This project contains an NGINX Reverse Proxy and the tools for installing it on an AWS EC2 container.
 
 The Reverse Proxy is specifically designed to:
 
-- Inrease the security of a HTTPS server
+- Increase the security of a HTTPS server
     - Block unexpected requests
-    - Block IPs based on suspicious acitivity
-- Cache frequenty requested content
+    - Block IPs based on suspicious activity
+- Cache frequently requested content
 - Perform SSL encryption on behalf of the server
 
 #### Built With
@@ -93,14 +88,21 @@ Below are the steps to use this project to create an AWS EC2 container running a
    ```sh
    git clone https://github.com/DanielJShen/nginx-reverse-proxy.git
    ```
-2. Update the configuration file with the following:
+2. Update the configuration file with the following steps:
     1. Set the EC2 instance id/keys
-3. Run the following commands:
+3. Run these command and ensure they run successfully: 
+   1. `terraform init`
+   2. `terraform validate`
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-TODO
+To create the ec2 instance you can run the following command:
+
+`AWS_ACCESS_KEY_ID=<KEY_ID> AWS_SECRET_ACCESS_KEY=<KEY> terraform apply`
+
+It will take the provided AWS Access Key and then create a `t2.micro` instance in the `eu-west-2` region.
+These values can be changed in `terraform/config.yaml`
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -139,9 +141,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Acknowledgments
 
 * Choose an Open Source License
-  </br> https://choosealicense.com
+  * https://choosealicense.com
 * Best-README-Template
-  </br> [![Best_README_Template](https://img.shields.io/badge/Best_README_Template-black?style=plastic&logo=github&logoColor=white)](https://github.com/othneildrew/Best-README-Template)
+  * [![Best_README_Template](https://img.shields.io/badge/Best_README_Template-black?style=plastic&logo=github&logoColor=white)](https://github.com/othneildrew/Best-README-Template)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -157,7 +159,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [license-url]: https://github.com/DanielJShen/nginx-reverse-proxy/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://uk.linkedin.com/in/danieljshenfield
-[project-screenshot]: images/screenshot.png
 [terraform]: https://img.shields.io/badge/Terraform-EFEFEF?style=for-the-badge&logo=terraform&logoColor=purple
 [terraform-url]: https://www.terraform.io/
 [nginx]: https://img.shields.io/badge/NGINX-black?style=for-the-badge&logo=nginx&logoColor=green
